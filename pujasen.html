@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    background-image: url('baloons.jpg'); /* Background image with balloons */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center; /* Center align the content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  button {
+    background-color: #FF4F70; /* Button background color */
+    color: white; /* Button text color */
+    font-size: 24px; /* Button text size */
+    padding: 15px 30px; /* Button padding */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Show pointer cursor on hover */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+  }
+
+  button:hover {
+    background-color: #FF7F50; /* Change button color on hover */
+  }
+
+  video {
+    max-width: 100%; /* Make sure the video doesn't exceed the viewport width */
+  }
+
+  .doll {
+    background-image: url('happybirthday.jpg'); /* Background image with doll */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 300px; /* Adjust the doll's width as needed */
+    height: 300px; /* Adjust the doll's height as needed */
+  }
+</style>
+</head>
+<body>
+  <div class="doll"></div>
+  <button id="playButton">Hey! Google today most cutest girl came in universe,can you show me her photo? yah sure click here</button>
+  <video id="cuteGirlVideo" controls style="display: none;">
+    <source src="pujasen.mp4" type="video/mp4">
+    <!-- Add additional source elements for different video formats if needed -->
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    const playButton = document.getElementById('playButton');
+    const cuteGirlVideo = document.getElementById('cuteGirlVideo');
+
+    playButton.addEventListener('click', () => {
+      // Show the video and play it when the button is clicked
+      cuteGirlVideo.style.display = 'block';
+      cuteGirlVideo.play();
+    });
+  </script>
+</body>
+</html>
